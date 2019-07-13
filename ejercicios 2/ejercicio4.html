@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 2 - 4</title>
+
+        <script>
+            var hora = parseInt(prompt('ingrese valor hora'));
+            var horasPorMes = parseInt(prompt('ingrese cantidad de horas por mes'));
+            var antiguedad = parseInt(prompt('ingrese anios de antiguedad'));
+            var segurosVendidos = parseInt(prompt('ingrese cantidad de seguros vendidos'));
+            var seguroMasCaro = parseInt(prompt('ingrese valor del segurio mas caro'));
+
+            var sueldoBasico = hora * horasPorMes;
+            var sueldoAnio = sueldoBasico * 12;
+            var Premio1 = (seguroMasCaro * 50) / 100;
+            var porcentajePremio2 = (sueldoBasico * 20) / 100;
+            var premio2 = porcentajePremio2 * segurosVendidos;
+            var sueldoMesBonificado = sueldoBasico + Premio1 + premio2;
+            var porcentajeAntiguedad = antiguedad * 10;
+            var premio3 = (sueldoAnio * porcentajeAntiguedad) / 100;
+            var sueldoAnualBonificado = sueldoMesBonificado * 12 + premio3;
+            var valorHoraBonificado = sueldoMesBonificado / horasPorMes;
+
+            document.write('<p>valor por hora: ' + valorHoraBonificado + '</p>');
+            document.write('<p>el sueldo por mes bonificado es: ' + sueldoMesBonificado + '</p>');
+            document.write('<p>el sueldo por anual bonificado es: ' + sueldoAnualBonificado + '</p>');
+        </script>
+    </head>
+    <body></body>
+</html>

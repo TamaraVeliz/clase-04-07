@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 2 - 3</title>
+
+        <script>
+            var sueldoBasico = parseInt(prompt('ingrese sueldo basico'));
+            var segurosVendidos = parseInt(prompt('ingrese cantidad de seguros vendidos'));
+            var seguroMasCaro = parseInt(prompt('ingrese valor del segurio mas caro'));
+
+            var Premio1 = (seguroMasCaro * 25) / 100;
+            var porcentajePremio2 = (sueldoBasico * 15) / 100;
+            var premio2 = porcentajePremio2 * segurosVendidos;
+            var sueldoMesBonificado = sueldoBasico + Premio1 + premio2;
+
+            document.write('<p>el sueldo por mes bonificado es: ' + sueldoMesBonificado + '</p>');
+        </script>
+    </head>
+    <body></body>
+</html>

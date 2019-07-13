@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 2 - 10</title>
+
+        <script>
+            var primerNumero = parseInt(prompt('ingrese el primer numero'));
+            var segundoNumero = parseInt(prompt('ingrese el segundo numero'));
+            var operador = prompt('ingrese un operador + - * / %');
+
+            var resultado;
+
+            switch (operador) {
+                case '+':
+                    resultado = primerNumero + segundoNumero;
+                    document.write('<p>La suma de los numeros es: ' + resultado + '</p>');
+                    break;
+
+                case '-':
+                    resultado = primerNumero - segundoNumero;
+                    document.write('<p>La resta de los numeros es: ' + resultado + '</p>');
+                    break;
+
+                case '*':
+                    resultado = primerNumero * segundoNumero;
+                    document.write('<p>La multiplicacion de los numeros es: ' + resultado + '</p>');
+                    break;
+
+                case '/':
+                    resultado = primerNumero / segundoNumero;
+                    document.write('<p>La division de los numeros es: ' + resultado + '</p>');
+                    break;
+
+                case '%':
+                    resultado = (primerNumero * segundoNumero) / 100;
+                    document.write('<p>El porcentaje de los numeros es: ' + resultado + '</p>');
+                    break;
+
+                default:
+                    document.write('atr');
+            }
+        </script>
+    </head>
+    <body></body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 2 - 13</title>
+
+        <script>
+            var hora = parseInt(prompt('ingrese valor hora'));
+            var horasPorMes = parseInt(prompt('ingrese cantidad de horas por mes'));
+            var antiguedad = parseInt(prompt('ingrese anios de antiguedad'));
+
+            var sueldoBasico = hora * horasPorMes;
+            var sueldoAnio = sueldoBasico * 12;
+
+            var porcentajeAntiguedad = antiguedad * 10;
+            var premioAntiguedad = (sueldoAnio * porcentajeAntiguedad) / 100;
+            var premio110 = (sueldoBasico * 5) / 100;
+            var premio220 = (sueldoBasico * 10) / 100;
+
+            var sueldoAntiguedad = sueldoBasico + premioAntiguedad;
+            var sueldoAntiguedad110 = sueldoAntiguedad + premio110;
+            var sueldoAntiguedad220 = sueldoAntiguedad + premio220;
+
+            if (horasPorMes < 110) {
+                document.write('<p>el sueldo por mes bonificado (sueldo basico + antiguedad) es: ' + sueldoAntiguedad + '</p>');
+            } else if (horasPorMes > 110 && horasPorMes < 220) {
+                document.write('<p>el sueldo por mes bonificado (sueldo basico + antiguedad +  5%) es: ' + sueldoAntiguedad110 + '</p>');
+            } else if (horasPorMes > 220) {
+                document.write('<p>el sueldo por mes bonificado (sueldo basico + antiguedad +  10%) es: ' + sueldoAntiguedad220 + '</p>');
+            }
+        </script>
+    </head>
+    <body></body>
+</html>

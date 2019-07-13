@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 2 - 14</title>
+
+        <script>
+            var categoria = parseInt(prompt('ingrese categoria'));
+            var horasExtras = parseInt(prompt('ingrese cantidad de horas extras'));
+            var antiguedad = parseInt(prompt('ingrese anios de antiguedad'));
+
+            var uno = 3000;
+            var dos = 4000;
+            var tres = 5000;
+            var cuatro = 6000;
+            var valorPremioAntiguedad = 50;
+
+            var premioAntiguedad = valorPremioAntiguedad * antiguedad;
+            var premio1 = uno + 500 + premioAntiguedad;
+            var premio2 = dos + premioAntiguedad;
+            var premio3 = tres + 1000 + premioAntiguedad;
+            var premio4 = cuatro + premioAntiguedad;
+
+            if (categoria == 1 && horasExtras > 20) {
+                document.write('<p>el sueldo por mes bonificado (sueldo basico + antiguedad) es: ' + premio1 + '</p>');
+            }
+            if (categoria == 2) {
+                document.write('<p>el sueldo por mes bonificado (sueldo basico + antiguedad) es: ' + premio2 + '</p>');
+            } else if (categoria == 3 && antiguedad > 5) {
+                document.write('<p>el sueldo por mes bonificado (sueldo basico + antiguedad) es: ' + premio3 + '</p>');
+            } else if (categoria == 4) {
+                document.write('<p>el sueldo por mes bonificado (sueldo basico + antiguedad) es: ' + premio4 + '</p>');
+            }
+        </script>
+    </head>
+    <body></body>
+</html>

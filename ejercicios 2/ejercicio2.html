@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 2 - 2</title>
+
+        <script>
+            var hora = prompt('ingrese valor hora');
+            var horasPorMes = prompt('ingrese cantidad de horas por mes');
+            var antiguedad = prompt('ingrese anios de antiguedad');
+
+            var sueldoMes = hora * horasPorMes;
+            var sueldoAnio = sueldoMes * 12;
+            var porcentaje = antiguedad * 5;
+            var premio = (sueldoAnio * porcentaje) / 100;
+            var sueldoAnioPremio = sueldoAnio + premio;
+
+            document.write('<p>el sueldo por mes es: ' + sueldoMes + '</p>');
+
+            document.write('<p>el sueldo por año con premio es: ' + sueldoAnioPremio + '</p>');
+        </script>
+    </head>
+    <body></body>
+</html>
