@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 2 - 10</title>
+
+        <script>
+            var resultado, primerNumero, segundoNumero, operador;
+
+            do {
+                do {
+                    primerNumero = parseInt(prompt('ingrese el primer numero'));
+                } while (isNaN(primerNumero));
+
+                do {
+                    segundoNumero = parseInt(prompt('ingrese el segundo numero'));
+                } while (isNaN(segundoNumero));
+
+                do {
+                    operador = prompt('ingrese un operador + - * / %');
+                } while (operador != '+' && operador != '-' && operador != '*' && operador != '/' && operador != '+');
+
+                switch (operador) {
+                    case '+':
+                        resultado = primerNumero + segundoNumero;
+
+                    case '-':
+                        resultado = primerNumero - segundoNumero;
+
+                    case '*':
+                        resultado = primerNumero * segundoNumero;
+
+                    case '/':
+                        resultado = primerNumero / segundoNumero;
+
+                    case '%':
+                        resultado = (primerNumero * segundoNumero) / 100;
+
+                    default:
+                        document.write('operacion invalida');
+                }
+                document.write('<p>El resultado de la operacion es' + primerNumero + operador + segundoNumero + '=' + resultado + '</p>');
+                var r = confirm('desea seguir ingresando numeros?');
+            } while (r);
+        </script>
+    </head>
+    <body></body>
+</html>

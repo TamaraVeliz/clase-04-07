@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 3 - 4</title>
+
+        <script>
+
+
+
+
+            do {
+                var nombre =  prompt('ingrese nombre del alumno');
+                var nota = parseInt(prompt('ingrese nota del alumno'));
+
+                if( nota >= 10 && nota <= 1){
+                    document.write('el numero es esta dentro del rango 1 a 10');
+                    if (nota > 4 ){
+                        document.write('el alumno' + nombre +  'obtuvo nota mayor a 4: ' + nota + '<br/>');
+                    }else if (nota < 4 ){
+                        document.write('el alumno' + nombre +  'obtuvo nota menor a 4: ' + nota + '<br/>');
+                    }else if (nota == 4 ){
+                        document.write('el alumno' + nombre +  'obtuvo nota igual a 4: ' + nota + '<br/>');
+                    }var r = confirm('desea seguir ingresando alumnos?');
+                    while (r);
+                }
+                } else if{
+                    document.write('la nota ingresada esta fuera del rango 1 a 10 <br/>');
+
+                }
+        </script>
+    </head>
+    <body></body>
+</html>
