@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 3 - 9</title>
+
+        <script>
+            var nota;
+            var cantAprobados = 0;
+            var cantDesaprobados = 0;
+            var sumaNotas = 0;
+            do {
+                do {
+                    nota = parseInt(prompt('ingrese nota mayor o igual a uno y menor o igual a diez'));
+                } while (isNaN(nota) || nota < 1 || nota > 10);
+
+                if (nota >= 4) {
+                    cantAprobados++;
+                } else {
+                    cantDesaprobados++;
+                }
+
+                var r = confirm('desea seguir ingresando notas?');
+            } while (r);
+
+            var sumaNotas = sumaNotas + nota;
+
+            var cantTotal = cantAprobados + cantDesaprobados;
+
+            var promedioTotal = sumaNotas / cantTotal;
+
+            var porcentajeAprobados = (cantTotal * cantAprobados) / 100;
+
+            document.write(cantAprobados + ' cantidad de aprobados <br/>');
+            document.write(cantDesaprobados + ' cantidad de desaprobados <br/>');
+            document.write(promedioTotal + ' PROMEDIO DE NOTAS <br/>');
+            document.write(porcentajeAprobados + ' porcentaje de alumnos aprobados <br/>');
+        </script>
+    </head>
+    <body></body>
+</html>

@@ -4,17 +4,24 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Parte 3 - 3</title>
+        <title>Parte 3 - 12</title>
 
         <script>
             var rangoMenor = parseInt(prompt('ingrese rango menor'));
             var rangoMayor = parseInt(prompt('ingrese rango mayor'));
+            var contador = 0;
+            var mayor, menor;
 
             dif = rangoMayor - rangoMenor;
 
-            if (dif >= 5) {
+            if (dif >= 10) {
                 do {
-                    var numero = prompt('ingrese un numero');
+                    do {
+                        numero = parseInt(prompt('ingrese un numero'));
+                        if (isNaN(numero)) {
+                            alert('EL VALOR INGRESADO NO ES UN NUMERO');
+                        }
+                    } while (isNaN(numero));
 
                     if (numero >= rangoMenor && numero <= rangoMayor) {
                         document.write('el numero es esta dentro del rango');
@@ -30,7 +37,19 @@
                             document.write('el numero es impar');
                         }
                     }
+
+                    if (contador == 0) {
+                        mayor = numero;
+                        menor = numero;
+                    } else {
+                        mayor >= numero;
+                        menor <= numero;
+                    }
+
+                    contador++;
                 } while (r);
+            } else {
+                alert('No hay una diferencia de 10 numeros entre cada valor');
             }
         </script>
     </head>

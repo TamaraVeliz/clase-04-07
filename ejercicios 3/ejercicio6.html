@@ -9,17 +9,17 @@
         <script>
             var sueldoMes = hora * horasPorMes;
 
-                       do {
-                            do {
-                               var hora = parseInt(prompt('ingrese valor hora'));
-                           } while (isNaN(hora));
+            do {
+                do {
+                    var hora = parseInt(prompt('ingrese valor hora'));
+                } while (isNaN(hora));
 
-                           do {
-                               var horasPorMes = parseInt(prompt('ingrese cantidad de horas por mes'));
-                           } while (isNaN(horasPorMes));
-                           document.write( document.write('<p>el sueldo por mes es: ' + sueldoMes + '</p>');
-                       var r = confirm('desea seguir ingresando numeros?');
-                       }  while (r);
+                do {
+                    var horasPorMes = parseInt(prompt('ingrese cantidad de horas por mes'));
+                } while (isNaN(horasPorMes));
+                document.write(document.write('<p>el sueldo por mes es: ' + sueldoMes + '</p>'));
+                var r = confirm('desea seguir ingresando numeros?');
+            } while (r);
         </script>
     </head>
     <body></body>

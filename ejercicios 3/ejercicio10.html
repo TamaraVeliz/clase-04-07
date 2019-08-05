@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Parte 3 - 10</title>
+
+        <script>
+            var numero;
+            var sumaMultiplos7 = 0;
+            var multiplosDe4 = 0;
+            var pares = 0;
+            var sumaImpares = 0;
+            do {
+                numero = parseInt(prompt('ingrese un numero'));
+                if (numero % 4 == 0) {
+                    multiplosDe4++;
+                } else if (numero % 7 == 0) {
+                    var sumaMultiplos7 = sumaMultiplos7 + numero;
+                }
+
+                if (numero % 2 == 0) {
+                    pares++;
+                } else if (numero % 2 != 0) {
+                    var sumaImpares = sumaImpares + numero;
+                }
+                var r = confirm('desea seguir ingresando numeros?');
+            } while (r);
+
+            document.write(multiplosDe4 + ' cantidad de multiplos de 4 <br/>');
+            document.write(sumaMultiplos7 + ' suma de multiplos de 7 <br/>');
+            document.write(pares + ' cantidad de numeros pares <br/>');
+            document.write(sumaImpares + ' suma de numeros impares <br/>');
+        </script>
+    </head>
+    <body></body>
+</html>
